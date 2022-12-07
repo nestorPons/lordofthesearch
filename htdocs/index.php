@@ -21,6 +21,5 @@ $url_base = str_replace('htdocs', '', $_SERVER['DOCUMENT_ROOT']);
 //configuracion general 
 require(FOLDER_VENDOR . 'autoload.php');
 
-$conf = parse_ini_file(FOLDER_APP . "config/conf.ini");
-$router = new \app\fichador\core\Controller(FOLDER_VIEWS, FOLDER_MODELS, 'login' , 'phtml', $conf);
+$router = new \app\core\Controller(FOLDER_VIEWS, FOLDER_MODELS, 'login' , 'phtml');
 $router->route($_REQUEST);
